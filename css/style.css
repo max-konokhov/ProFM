@@ -1,0 +1,587 @@
+ /*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+/*--------------------*/
+
+ 
+ body{
+ 	background:url('../img/fon2.jpg')0 0/cover no-repeat fixed; 
+ }
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	color:white;
+	font-size: 24px;
+	height: 100%;
+	/*border: 5px solid orange;*/
+	/*background-color: orange;*/
+}
+
+/*-------------------------------------------------------------*/
+/*                       Шапка                                 */
+/*-------------------------------------------------------------*/
+
+header {
+	display: flex;
+	justify-content: space-between;
+   background-color:#202539;
+   position: fixed;
+   max-width: 1200px;
+   height: 110px;
+   z-index: 1000;
+	/*border: blue solid 5px;*/
+}
+
+.header__logo {
+	width: 15%;
+	
+	margin: 5px 5px 5px 50px;
+	background:url('../img/ProFm100.jpg')  no-repeat;
+	/*border: red solid 5px;*/
+}
+
+.header__body {
+	width: 65%;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	/*border: lime solid 1px;*/
+}
+
+.header__title {
+	font-size: 30px;
+	font-style: italic;
+	color:white;
+	text-shadow: black 2px 2px 2px;
+	text-align: center;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	/*border: fuchsia solid 1px;*/
+
+}
+.header__subtitle {
+	
+	/*color:#01F3D5;*/
+	color: aqua;
+	padding: 5px 30px 0;
+	margin: 0 70px;
+	text-align: center;
+	font-style: italic;
+	font-size: 16px;
+	line-height: 18px;
+	/*border: teal solid 1px;*/
+
+}
+
+/*----------Цвет букв для span-саблого (переметить вниз для всех)-----------*/
+.logo__pro {
+	color: red;
+}
+
+.logo__fm {
+	color:white;
+}
+
+
+
+.header__search {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	width: 20%;
+	min-height: 100px;
+	min-width: 100px;
+	margin: 5px;
+	
+	/*border: purple solid 5px;*/
+}
+
+.header__search form {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  min-width: 100px;
+  overflow: hidden;
+
+}
+.d1 {background: #A3D0C3;}
+.d1 input {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  border: 2px solid #7BA7AB;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #9E9C9C;
+}
+.d1 button {
+  position: absolute; 
+  top: 0;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #7BA7AB;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.d1 button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
+
+/*------------------------------------------------------------------*/
+/*                       Верхнее меню                               */
+/*------------------------------------------------------------------*/
+
+.top-menu {
+	background-color: #202539;
+	margin-top: 110px;
+	/*border: silver solid 5px;*/
+	
+}
+
+.top-menu__list {
+	display: flex;
+	justify-content: center;
+	padding-left: 0;
+	font-size: 18px;
+	background-color: #202539;
+	text-align: center;
+	margin: 0;
+	border:solid #1DA099 3px;
+	background-color: #35505F;
+	align-items:center;
+}
+
+.top-menu__list li {
+	padding: 5px;
+	/*border:white solid 2px;*/
+}
+
+.top-menu__list a {
+	color:white;
+	color:white;
+	font-size: 22px;
+	padding: 0 25px;
+	font-weight: 500;
+	text-shadow: black 2px 2px 2px;
+	/*border:#06EFFE 1px solid;*/	
+}
+
+.top-menu__list a:hover{
+	background-color: white;
+	color: black;
+	text-shadow: none;
+	border-radius: 5px;
+}	
+
+
+/*------------------------------------------------------------------*/
+/*                       Блок "Контент"                             */
+/*------------------------------------------------------------------*/
+
+.content {
+	flex: 1 0 auto;
+	/*background-color: yellow;*/
+	/*border: yellow solid 5px;*/
+}
+
+.content__container {
+	display: flex;
+	justify-content: space-between;
+	align-items:flex-start;
+	margin-top: 2px;
+	/*background-color: grey;*/
+	/*border:5px grey solid;*/
+}
+
+.content__left-column {
+	/*background-color: aqua ;*/
+	/*border:#008E8E solid 2px;*/
+	width: 18%;
+	max-height: 750px;
+	border-radius: 10px;
+	margin-right: 2px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.content__burger-menu {
+	background-color: #004242 ;
+	border-left: aqua solid 2px;
+	border-right:  aqua solid 2px;
+	border-top: aqua solid 2px;
+	border-top-left-radius: 10px; /* Левый нижний уголок */
+   border-top-right-radius: 10px; /* Правый нижний уголок */
+   border-bottom: aqua 1px solid;
+
+
+}
+
+.content__side-menu-list {
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	
+	border-bottom: aqua solid 2px;
+	border-bottom-left-radius: 10px; /* Левый нижний уголок */
+   border-bottom-right-radius: 10px; /* Правый нижний уголок */
+   border-left: aqua solid 2px;
+	border-right:  aqua solid 2px;
+	text-align: left;
+	color: white;
+	font-size: 18px;
+	padding: 0px 0px 6px;
+	align-self:flex-start;
+	background-color: #182037 ;
+
+}
+
+
+.content__side-menu-list li {
+	
+	/*border:white solid 2px;*/
+	padding: 0 0px;
+	background-color: #182037 ;
+
+}
+.content__side-menu-list hr{
+	background-color: black;
+	border: none;
+	height: 1px;
+}
+
+
+
+.content__side-menu-list a{
+	color:white;
+	font-size: 20px;
+	padding: 2 10px;
+	line-height: 24px;
+	display: block;
+
+}
+
+.content__side-menu-list a:hover{
+	background-color: white;
+	color:#202539;
+	border-radius: 5px;
+	text-shadow: none;
+	font-weight: bold;
+
+}
+
+
+iframe{
+	border:aqua 2px solid;
+	border-bottom: aqua solid 2px;
+	border-bottom-left-radius: 10px; /* Левый нижний уголок */
+   border-bottom-right-radius: 10px;
+
+}
+
+.content__side-menu-item {}
+
+.content__side-menu-item:before {
+	content: "";
+  background-image: url('../img/icon/icon_players.png.jpg');
+  background-size: cover;
+  height:16px;
+  width: 16px;
+  
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.content__news-decription {
+	font-size: 20px;
+	
+	line-height: 24px;
+	margin-top: 3px;
+	background-color:  #004242;
+
+	border-left: aqua solid 2px;
+	border-right:  aqua solid 2px;
+	border-top: aqua solid 2px;
+	border-top-left-radius: 10px; /* Левый нижний уголок */
+   border-top-right-radius: 10px; /* Правый нижний уголок */
+}
+
+.content__news {
+	display: flex;
+	flex-direction: column;
+	/*max-height: 400px;*/
+	/*overflow-y: scroll;*/
+
+	font-size: 14px;
+
+	
+	background-color:#005959; 
+	
+	
+
+	}
+
+
+
+
+
+
+/*.news1 {
+	background-color:#005959;
+	border: 1px solid aqua;
+	border-top: none;
+	padding: 3px;
+	color:white;
+	text-align: left;
+}*/
+
+
+
+
+
+.content__right-column {
+	
+	
+	width: 84%;
+	max-height: 750px;
+	/*overflow-y: scroll;*/
+	font-size: 24px;
+	
+	border:aqua solid 2px;
+	background-color:#1D2E41;
+	color:#E8DE87;
+	
+	padding: 5px 10px;
+	border-radius: 10px;
+	color:white;  /*  для табов*/
+	
+	position: relative; /*  для табов*/
+	
+	
+
+}
+
+.content__right-column p{
+	margin: 0 0 10px;
+	padding-bottom: 5px;
+	font-size: 16px;
+	line-height: 18px;
+
+	
+	
+}
+
+
+
+/*---------------------------------*/
+/*--------------ТАБЫ:--------------*/
+/*---------------------------------*/
+
+.content__tabs {
+   margin: 0 0 3px 0;
+	/*border:silver 3px solid;*/
+	
+
+
+}
+
+.content__tabs-items {
+	display: flex;
+	/*border:aqua 2px solid;*/
+
+}
+.content__tabs-item {
+	flex: 0 1 20%;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-size: 16px;
+	border:teal 1px solid;
+	border-bottom: none;
+	border-top-left-radius: 10px; /* Левый нижний уголок */
+   border-top-right-radius: 10px; /* Правый нижний уголок */
+
+
+}
+
+
+
+
+.content__tabs-item span {
+	position: relative;
+	z-index: 2;
+	font-size: 12px;
+	color:white;
+
+
+
+
+}
+
+
+.tabs__body {
+	/*border:black 2px solid;*/
+
+	
+
+
+
+}
+.content__tabs-block {
+	position: relative; ;
+	padding: 30px;
+	font-size: 18px;
+	line-height: 26px;
+	display: none;
+	border:#14FF6A 1px solid;
+	border-bottom-left-radius: 10px; /* Левый нижний уголок */
+   border-bottom-right-radius: 10px; /* Правый нижний уголок */
+
+
+
+
+}
+.content__tabs-block:before{
+	content: "";
+	height: 30px;
+	width: 20%;
+	position: absolute;
+	top:-30px;
+	
+
+	border: 1px #14FF6A solid;
+	border-bottom: none;
+	border-top-left-radius: 10px; /* Левый нижний уголок */
+   border-top-right-radius: 10px; /* Правый нижний уголок */
+
+
+
+}
+
+.content__tabs-block:nth-child(1) {
+	background-color: #2A435F;
+}
+
+.content__tabs-block:nth-child(1):before {
+	background-color: #2A435F;
+	left: -1;
+	
+}
+
+.content__tabs-block:nth-child(2) {
+	background-color: #2A435F;
+}
+
+.content__tabs-block:nth-child(2):before {
+	background-color: #2A435F;
+	left: 20%;
+}
+
+.content__tabs-block:nth-child(3) {
+	background-color: #2A435F;
+}
+
+.content__tabs-block:nth-child(3):before {
+	background-color: #2A435F;
+	left: 40%;
+}
+
+.content__tabs-block:nth-child(4) {
+	background-color: #2A435F;
+}
+
+.content__tabs-block:nth-child(4):before {
+	background-color: #2A435F;
+	left: 60%;
+}
+
+.content__tabs-block:nth-child(5) {
+	background-color: #2A435F;
+}
+
+.content__tabs-block:nth-child(5):before {
+	background-color: #2A435F;
+	right: -1;
+}
+
+.content__tabs-block:target {
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+	background: #7BA7AB;
+	text-align: center;
+}
